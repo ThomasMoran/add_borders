@@ -1,4 +1,4 @@
-#!/usr/bin/env /Users/thomas/Documents/dev-playground/personal/scripts/.venv/bin/python3.9
+#!/usr/bin/env python3
 
 import os
 from PIL import Image
