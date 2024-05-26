@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import sys  
 from PIL import Image
 
 def add_border(image_path, output_folder, border_size):
@@ -50,6 +51,11 @@ def main():
 
     # Set border size
     border_size = 50
+    if len(sys.argv) > 1:
+        try:
+            border_size = int(sys.argv[1])
+        except ValueError:
+            print("Error: Border size must be an integer. Using default size.")
 
     # Process images
     process_images(input_folder, output_folder, border_size)
